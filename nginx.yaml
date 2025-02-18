@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    run: ngin
+    run: nginx
     method: fromcode
     another: label
   name: nginx-yaml
