@@ -1,0 +1,31 @@
+#!/bin/bash
+# Description: Print the color of a given fruit
+
+set -euo pipefail
+
+# Validate argument
+if [[ $# -ne 1 ]]; then
+  echo "Usage: $0 <fruit>"
+  exit 1
+fi
+
+fruit_name="$1"
+
+case "$fruit_name" in
+  apple)
+    echo "Red or green"
+    ;;
+  banana)
+    echo "Yellow"
+    ;;
+  orange)
+    echo "Orange"
+    ;;
+  grape)
+    echo "Purple or green"
+    ;;
+  *)
+    echo "Unknown fruit: $fruit_name" >&2
+    exit 1
+    ;;
+esac
